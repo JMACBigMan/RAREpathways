@@ -1,3 +1,37 @@
+// Mobile navigation hamburger toggle
+(function () {
+    const toggle  = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-right-group');
+
+    if (!toggle || !navMenu) return;
+
+    // Open / close the dropdown
+    toggle.addEventListener('click', function (e) {
+        e.stopPropagation(); // Prevent the document click below from firing immediately
+        const isOpen = navMenu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+        toggle.textContent = isOpen ? '✕' : '☰';
+    });
+
+    // Close when any nav link is tapped (smooth UX after selecting an item)
+    navMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            navMenu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.textContent = '☰';
+        });
+    });
+
+    // Close when tapping anywhere outside the nav
+    document.addEventListener('click', function (e) {
+        if (!toggle.contains(e.target) && !navMenu.contains(e.target)) {
+            navMenu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.textContent = '☰';
+        }
+    });
+}());
+
 // Consent checkbox validation
 // Blocks form submission and shows an inline error if the box is unchecked.
 (function () {

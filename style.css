@@ -684,6 +684,29 @@ footer {
 .reveal-stagger.visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
 .reveal-stagger.visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.45s; }
 
+/* --- Mobile Navigation Toggle --- */
+
+/* Hidden on desktop — shown via media query below */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 2px solid rgba(255,255,255,0.35);
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 3px 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s, border-color 0.2s;
+    line-height: 1;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+    background-color: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.6);
+    outline: none;
+}
+
 /* --- Responsive Design --- */
 
 /* Tablet landscape and smaller */
@@ -725,20 +748,53 @@ footer {
 
     /* Footer legal row: stack and left-align on narrow screens */
     .footer-disclaimer { text-align: left; }
+
+    /* --- Hamburger nav --- */
+
+    /* Show the toggle button */
+    .nav-toggle { display: block; }
+
+    /* Keep header as a single compact row — no more stacking */
+    header {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 12px 5%;
+        /* Relative so the absolute dropdown is positioned from the header bottom */
+        position: fixed;
+    }
+
+    /* Shrink the logo text so it fits on one line with the toggle */
+    .company-name { font-size: 1.3rem; }
+    .company-tagline { font-size: 0.95rem; }
+
+    /* Hide nav items by default — becomes an absolute dropdown */
+    .nav-right-group {
+        display: none;
+        position: absolute;
+        top: 100%;       /* Sits flush below the header */
+        left: 0;
+        right: 0;
+        background-color: var(--nav-bg-color);
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 22px 20px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+        border-top: 1px solid rgba(255,255,255,0.12);
+        z-index: 999;
+    }
+
+    /* Revealed when JS adds .open */
+    .nav-right-group.open { display: flex; }
+
+    /* Give the hero enough top padding for the compact single-row header */
+    .hero { padding-top: 90px; }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px 5%;
-    }
-
-    .nav-right-group {
-        flex-direction: column;
-        gap: 10px;
-    }
+    /* Header stacking removed — handled by hamburger menu above */
 
     .selling-message h1 {
         font-size: 2.2rem;
