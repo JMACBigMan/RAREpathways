@@ -1,0 +1,32 @@
+name: Deploy to Hostinger
+
+# Runs automatically every time you push to the main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the latest code from the main branch
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Upload all files to Hostinger public_html via FTP
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /public_html/
+          # Excludes files that don't need to be on the live server
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/CLAUDE.md
+            **/desktop.ini
+            **/.github/**
