@@ -10,6 +10,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Plain HTML/CSS/JS — no build tools, no package manager, no framework. Serve directly from the filesystem or any static host.
 
+**Hosting:** Netlify, connected to the GitHub repo (`JMACBigMan/RAREpathways`). Every push to `main` auto-deploys. Settings live in `netlify.toml` (no build; publishes the repo root and strips `CLAUDE.md`/`.github`). The old Hostinger FTP GitHub Action was removed. Domain DNS is managed at Hostinger — change only the A/CNAME web records, never the MX (email) records.
+
 ## Architecture
 
 Single-page site (`index.html`) with companion `style.css` and `script.js`:
