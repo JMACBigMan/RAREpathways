@@ -18,6 +18,7 @@ Single-page site (`index.html`) with companion `style.css` and `script.js`:
 
 - **index.html** — Full page structure: fixed header nav, hero with lead-capture form, consent checkbox, informational sections, FAQ accordion, footer
 - **style.css** — CSS custom properties for color scheme, Grid/Flexbox layouts, responsive breakpoints at 600px / 768px / 992px
+- **Cache busting:** every page links `style.css?v=N` and `script.js?v=N`. Bump N on all pages whenever CSS/JS changes, or returning visitors may get stale styles.
 - **script.js** — FAQ accordion (toggles `.active` class, animates `max-height`) and consent checkbox validation (blocks form submit if unchecked, shows inline error)
 - **Images/** — `rare-pathways-logo.jpg` (compressed footer logo; built from `RarePathways Logo - clean.jpg`, the watermark-free source), `og-image.jpg` (1200×630 link-preview image), `BeforeAfter.png`
 - **favicon.svg / favicon-32.png / apple-touch-icon.png** — navy + yellow "R" tab icons, linked from every page head
