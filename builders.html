@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off-Market Lots for Builders in Atlanta, Macon, Charlotte &amp; Fayetteville | R.A.R.E. Pathways LLC</title>
+    <meta name="description" content="R.A.R.E. Pathways LLC sources vacant and infill lots directly from owners in Atlanta, Macon, Charlotte, and Fayetteville. Join our builder list to get first look at off-market lots that match what you build.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="canonical" href="https://rarepathwayshomes.com/builders.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="R.A.R.E. Pathways LLC">
+    <meta property="og:url" content="https://rarepathwayshomes.com/builders.html">
+    <meta property="og:title" content="Off-Market Lots for Builders | R.A.R.E. Pathways LLC">
+    <meta property="og:description" content="Vacant and infill lots sourced directly from owners in Atlanta, Macon, Charlotte, and Fayetteville. Join our builder list for first look.">
+    <meta property="og:image" content="https://rarepathwayshomes.com/Images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="R.A.R.E. Pathways LLC logo — Rescuing And Reviving Estates">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-group logo-link">
+            <div class="company-name">R.A.R.E. Pathways LLC</div>
+            <div class="company-tagline">Rescuing And Reviving Estates</div>
+        </a>
+        <!-- Hamburger toggle — visible only on mobile via CSS -->
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+
+        <div class="nav-right-group">
+            <a href="index.html" class="nav-link">Sell a Property</a>
+            <a href="tel:6786939453" class="phone-number"><span class="phone-icon">📞</span> (678) 693-9453</a>
+            <a href="#builder-form" class="cta-button-nav">Join Builder List</a>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="selling-message">
+            <h1>Build-Ready Lots<br><span class="yellow">Sourced Direct</span></h1>
+
+            <p class="main-points">
+                Vacant and infill lots acquired directly from property owners and offered
+                to builders off-market.
+            </p>
+
+            <p class="sub-points">
+                Tell us where you build and what you're looking for. When a lot that fits
+                comes in, you'll hear about it first.
+            </p>
+
+            <p class="hero-areas">
+                <span class="hero-areas-label">Now sourcing lots in:</span>
+                Metro Atlanta · Macon · Charlotte · Fayetteville
+            </p>
+        </div>
+
+        <div id="builder-form" class="form-container">
+            <div class="form-header">
+                <h2>Join Our Builder List</h2>
+                <p>Free to join. Get matched with lots that fit your criteria.</p>
+            </div>
+
+            <form class="lead-form" action="https://formspree.io/f/mnpdojnb" method="POST" data-redirect="builders-confirmation.html">
+                <input type="hidden" name="_subject" value="New Builder Inquiry — R.A.R.E. Pathways">
+                <!-- Honeypot: hidden from people, bots fill it in and Formspree discards the submission -->
+                <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="first_name">First Name <span class="required">*</span></label>
+                        <input type="text" id="first_name" name="first_name" placeholder="John" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name <span class="required">*</span></label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Doe" autocomplete="family-name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name <span class="required">*</span></label>
+                    <input type="text" id="company" name="company" placeholder="Doe Homes LLC" autocomplete="organization" required>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="phone">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="(678) 693-9453" autocomplete="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="john@doehomes.com" autocomplete="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="build_areas">Areas You Build In <span class="required">*</span></label>
+                    <input type="text" id="build_areas" name="build_areas" placeholder="Cities, counties, or ZIP codes" required>
+                </div>
+
+                <fieldset class="form-group chip-fieldset">
+                    <legend>Lot Types You Want</legend>
+                    <div class="chip-group">
+                        <label class="chip"><input type="checkbox" name="lot_types" value="Vacant lots"><span>Vacant lots</span></label>
+                        <label class="chip"><input type="checkbox" name="lot_types" value="Infill lots"><span>Infill lots</span></label>
+                        <label class="chip"><input type="checkbox" name="lot_types" value="Teardowns"><span>Teardowns</span></label>
+                        <label class="chip"><input type="checkbox" name="lot_types" value="Small acreage"><span>Small acreage</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="lots_per_year">Lots You Buy Per Year</label>
+                    <select id="lots_per_year" name="lots_per_year">
+                        <option value="" selected>Select a range (optional)</option>
+                        <option>1–2</option>
+                        <option>3–5</option>
+                        <option>6–10</option>
+                        <option>More than 10</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Anything Else?</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Lot size, zoning, price range, product type…"></textarea>
+                </div>
+
+                <div class="form-group consent-group">
+                    <label class="consent-label" for="consent">
+                        <input
+                            type="checkbox"
+                            id="consent"
+                            name="consent"
+                            class="consent-checkbox"
+                            aria-describedby="consent-error"
+                        >
+                        <span class="consent-text">
+                            By checking this box, you agree to the
+                            <a href="https://rarepathwayshomes.com/terms.html" target="_blank" rel="noopener noreferrer" class="consent-link">Terms of Use</a>
+                            and
+                            <a href="https://rarepathwayshomes.com/privacy.html" target="_blank" rel="noopener noreferrer" class="consent-link">Privacy Policy</a>.
+                        </span>
+                    </label>
+                    <span class="consent-error" id="consent-error" role="alert" aria-live="polite">
+                        Please agree to the Terms of Use and Privacy Policy to continue.
+                    </span>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <span>🏗️</span> Join the Builder List
+                </button>
+
+                <p class="form-submit-error" id="form-submit-error" role="alert" hidden>
+                    Something went wrong sending your info. Please try again or call us at (678) 693-9453.
+                </p>
+
+                <p class="confidential-text">We only contact you about lots that match your criteria.</p>
+            </form>
+        </div>
+    </main>
+
+    <section class="process-section">
+        <div class="container text-center">
+            <span class="eyebrow green reveal">WHAT WE OFFER</span>
+            <h2 class="section-title reveal">Lots You Won't Find on the MLS</h2>
+            <p class="max-600 reveal">We work directly with property owners every day. That gives us access to land opportunities before they're listed, and we bring the right ones straight to builders.</p>
+            <div class="process-grid reveal-stagger">
+                <div class="process-card">
+                    <div class="icon-circle">📍</div>
+                    <h3>Off-Market Opportunities</h3>
+                    <p>Lots sourced directly from owners, not pulled from public listings, so you're not competing with every builder in town.</p>
+                </div>
+                <div class="process-card">
+                    <div class="icon-circle">🏘️</div>
+                    <h3>Infill, Vacant &amp; Teardowns</h3>
+                    <p>From empty lots in established neighborhoods to properties ready for a teardown and rebuild.</p>
+                </div>
+                <div class="process-card">
+                    <div class="icon-circle">🎯</div>
+                    <h3>Matched to Your Criteria</h3>
+                    <p>We only send you lots in the areas and sizes you build, not a flood of deals that don't fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section bg-light">
+        <div class="container text-center">
+            <span class="eyebrow green reveal">THE PROCESS</span>
+            <h2 class="section-title reveal">How It Works for Builders</h2>
+            <div class="process-grid reveal-stagger">
+                <div class="process-card">
+                    <div class="icon-circle">📝</div>
+                    <h3>Tell Us What You Build</h3>
+                    <p>Share your target areas, lot types, and volume using the quick form above.</p>
+                </div>
+                <div class="process-card">
+                    <div class="icon-circle">📬</div>
+                    <h3>Get Matching Lots</h3>
+                    <p>When a lot fits your criteria, we reach out with the address, lot details, and pricing so you can evaluate it quickly.</p>
+                </div>
+                <div class="process-card">
+                    <div class="icon-circle">🤝</div>
+                    <h3>Review &amp; Close</h3>
+                    <p>Walk the lot, complete your due diligence, and if it works for you, we'll coordinate a straightforward closing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container text-center">
+            <span class="eyebrow green reveal">BUILDER FAQ</span>
+            <h2 class="section-title blue reveal">Common Questions</h2>
+
+            <div class="faq-container text-left reveal">
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>Where are your lots located?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <br><p>We currently source lots in metro Atlanta and Macon, Georgia, and in Charlotte and Fayetteville, North Carolina, including their surrounding communities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>Is there a cost to join the builder list?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <br><p>No. Joining is free, and there's no obligation to buy any lot we send you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>How often will I hear from you?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <br><p>Only when we have a lot that matches the areas and lot types you gave us. We don't send mass blasts of deals that don't fit.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>Are these lots listed on the MLS?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <br><p>Typically not. We acquire properties directly from owners, so most of the lots we offer are off-market opportunities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>Do you guarantee zoning or buildability?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <br><p>No. We share the information we have about each lot, but builders are responsible for their own due diligence, including zoning, setbacks, utilities, surveys, and permitting.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>Can I update my criteria later?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <br><p>Yes. Call us at (678) 693-9453 or email <a href="mailto:info@rarepathwayshomes.com" class="consent-link">info@rarepathwayshomes.com</a> any time your target areas or lot needs change.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta-section">
+        <div class="container reveal">
+            <h2 class="section-title white final-cta-title">Looking for Your Next Lot?</h2>
+            <p class="white-p final-cta-body">
+                Join our builder list and be among the first to see vacant and infill lots that fit
+                the areas and product you build.
+            </p>
+            <a href="#builder-form" class="cta-button-nav cta-button-lg pulse">👉 Join the Builder List</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-top-grid">
+
+            <div class="footer-brand reveal" style="transition-delay: 0.1s;">
+                <img src="Images/rare-pathways-logo.jpg" alt="RARE Pathways Logo" class="footer-logo-img" loading="lazy">
+                <p class="footer-muted-text">
+                    <strong>R.A.R.E. Pathways LLC</strong> — Rescuing And Reviving Estates.<br>
+                    Every property has potential. Every seller deserves options.
+                </p>
+                <p class="footer-links"><a href="index.html" class="footer-link">Selling a property? Get an offer →</a></p>
+            </div>
+
+            <div class="footer-contact reveal" style="transition-delay: 0.2s;">
+                <h4 class="footer-heading">CONTACT</h4>
+                <p style="margin-bottom: 15px;"><a href="mailto:info@rarepathwayshomes.com" class="footer-email"><span class="footer-email-icon">✉️</span> info@rarepathwayshomes.com</a></p>
+                <p><a href="tel:6786939453" class="footer-phone"><span class="footer-phone-icon">📞</span> (678) 693-9453</a></p>
+            </div>
+
+            <div class="footer-privacy reveal" style="transition-delay: 0.3s;">
+                <h4 class="footer-heading">YOUR PRIVACY</h4>
+                <div class="footer-privacy-row">
+                    <span class="footer-shield">🛡️</span>
+                    <p class="footer-muted-text">
+                        Your information is kept confidential and will never be sold. We only use it to send you lots that match your criteria.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="container footer-bottom-row">
+            <div class="footer-copyright">
+                <p>© 2026 R.A.R.E. Pathways LLC — Rescuing And Reviving Estates.<br>All rights reserved.</p>
+            </div>
+            <div class="footer-disclaimer">
+                <p><strong>Disclaimer:</strong> We are real estate investors. We are not real estate agents or brokers. We may assign or wholesale contracts. Lot information is provided as-is; buyers are responsible for their own due diligence, including zoning, utilities, and buildability.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

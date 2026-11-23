@@ -3,10 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R.A.R.E. Pathways LLC | Rescuing And Reviving Estates</title>
-    <meta name="description" content="R.A.R.E. Pathways LLC buys properties directly from homeowners — no repairs, no commissions, no pressure. Get a free, no-obligation offer today.">
+    <title>We Buy Houses in Atlanta, Macon, Charlotte &amp; Fayetteville | R.A.R.E. Pathways LLC</title>
+    <meta name="description" content="R.A.R.E. Pathways LLC buys houses directly from owners in Atlanta, Macon, Charlotte, and Fayetteville — as-is, no repairs, no commissions, no pressure. Get a free, no-obligation offer today.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "R.A.R.E. Pathways LLC",
+        "alternateName": "Rescuing And Reviving Estates",
+        "url": "https://rarepathwayshomes.com/",
+        "telephone": "+1-678-693-9453",
+        "email": "info@rarepathwayshomes.com",
+        "areaServed": [
+            { "@type": "City", "name": "Atlanta, GA" },
+            { "@type": "City", "name": "Macon, GA" },
+            { "@type": "City", "name": "Charlotte, NC" },
+            { "@type": "City", "name": "Fayetteville, NC" }
+        ]
+    }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="canonical" href="https://rarepathwayshomes.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="R.A.R.E. Pathways LLC">
+    <meta property="og:url" content="https://rarepathwayshomes.com/">
+    <meta property="og:title" content="We Buy Houses in Atlanta, Macon, Charlotte &amp; Fayetteville | R.A.R.E. Pathways LLC">
+    <meta property="og:description" content="Sell your property as-is — no repairs, no commissions, no pressure. Get a free, no-obligation offer from R.A.R.E. Pathways LLC.">
+    <meta property="og:image" content="https://rarepathwayshomes.com/Images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="R.A.R.E. Pathways LLC logo — Rescuing And Reviving Estates">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -19,6 +50,7 @@
         <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
 
         <div class="nav-right-group">
+            <a href="builders.html" class="nav-link">For Builders</a>
             <a href="tel:6786939453" class="phone-number"><span class="phone-icon">📞</span> (678) 693-9453</a>
             <a href="#offer-form" class="cta-button-nav">Get My Offer!</a>
         </div>
@@ -45,13 +77,15 @@
                 <p>No pressure. No obligations. Just real solutions.</p>
             </div>
 
-            <form class="lead-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHu000001A43v" method="POST">
-                <input type="hidden" name="oid" value="00DHu000001A43v">
-                <input type="hidden" name="retURL" value="https://rarepathwayshomes.com/confirmation.html">
+            <form class="lead-form" action="https://formspree.io/f/meaqnkve" method="POST">
+                <input type="hidden" name="_subject" value="New Property Lead — R.A.R.E. Pathways">
+                <!-- Honeypot: hidden from people, bots fill it in and Formspree discards the submission -->
+                <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-                <div class="form-group">
-                    <label for="00NHu00002KQZED">Property Address <span class="required">*</span></label>
-                    <input type="text" id="00NHu00002KQZED" name="00NHu00002KQZED" placeholder="123 Main St, City, State, ZIP" required>
+                <div class="form-group address-group">
+                    <label for="property_address">Property Address <span class="required">*</span></label>
+                    <input type="text" id="property_address" name="property_address" placeholder="123 Main St, City, State, ZIP" required>
+                    <ul id="address-suggestions" class="address-suggestions" role="listbox" hidden></ul>
                 </div>
 
                 <div class="form-group-row">
@@ -73,6 +107,22 @@
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="reason_for_selling">Reason for Selling</label>
+                    <select id="reason_for_selling" name="reason_for_selling">
+                        <option value="" selected>Select a reason (optional)</option>
+                        <option>Need to sell quickly</option>
+                        <option>Property needs repairs</option>
+                        <option>Inherited property</option>
+                        <option>Financial pressure / behind on payments</option>
+                        <option>Facing foreclosure</option>
+                        <option>Divorce or separation</option>
+                        <option>Relocating</option>
+                        <option>Tired of being a landlord</option>
+                        <option>Other</option>
+                    </select>
                 </div>
 
                 <!-- =============================================
@@ -107,6 +157,10 @@
                 <button type="submit" class="submit-button">
                     <span>👍</span> Get My Free Offer!
                 </button>
+
+                <p class="form-submit-error" id="form-submit-error" role="alert" hidden>
+                    Something went wrong sending your info. Please try again or call us at (678) 693-9453.
+                </p>
 
                 <p class="confidential-text">Your info is 100% confidential.</p>
             </form>
@@ -193,6 +247,42 @@
            <div class="image-box">
                 <img src="Images/BeforeAfter.png" alt="Before and after property renovation" class="rounded-img shadow" loading="lazy">
             </div>
+        </div>
+    </section>
+
+    <!-- Areas We Serve — styles in .areas-grid / .area-state / .area-card -->
+    <section class="areas-section bg-light" id="areas">
+        <div class="container text-center">
+            <span class="eyebrow green reveal">AREAS WE SERVE</span>
+            <h2 class="section-title reveal">We Buy Houses in Georgia &amp; North Carolina</h2>
+            <p class="max-600 reveal">We buy properties directly from owners in these cities and their surrounding communities.</p>
+
+            <div class="areas-grid reveal-stagger">
+                <div class="area-state">
+                    <h3 class="area-state-name">Georgia</h3>
+                    <div class="area-card">
+                        <span class="area-pin">📍</span>
+                        <div><strong>Metro Atlanta</strong><p>Atlanta and surrounding communities</p></div>
+                    </div>
+                    <div class="area-card">
+                        <span class="area-pin">📍</span>
+                        <div><strong>Macon</strong><p>Macon and middle Georgia</p></div>
+                    </div>
+                </div>
+                <div class="area-state">
+                    <h3 class="area-state-name">North Carolina</h3>
+                    <div class="area-card">
+                        <span class="area-pin">📍</span>
+                        <div><strong>Charlotte</strong><p>Charlotte and surrounding communities</p></div>
+                    </div>
+                    <div class="area-card">
+                        <span class="area-pin">📍</span>
+                        <div><strong>Fayetteville</strong><p>Fayetteville and surrounding communities</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="italic-note">Not sure if we cover your area? Call us at <a href="tel:6786939453" class="consent-link">(678) 693-9453</a> and just ask.</p>
         </div>
     </section>
 
@@ -350,11 +440,12 @@
         <div class="container footer-top-grid">
 
             <div class="footer-brand reveal" style="transition-delay: 0.1s;">
-                <img src="Images/RarePathways Logo.png" alt="RARE Pathways Logo" class="footer-logo-img" loading="lazy">
+                <img src="Images/rare-pathways-logo.jpg" alt="RARE Pathways Logo" class="footer-logo-img" loading="lazy">
                 <p class="footer-muted-text">
                     <strong>R.A.R.E. Pathways LLC</strong> — Rescuing And Reviving Estates.<br>
                     Every property has potential. Every seller deserves options.
                 </p>
+                <p class="footer-links"><a href="builders.html" class="footer-link">Builders: get first look at off-market lots →</a></p>
             </div>
 
             <div class="footer-contact reveal" style="transition-delay: 0.2s;">
